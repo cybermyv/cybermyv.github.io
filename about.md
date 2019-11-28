@@ -4,7 +4,9 @@ title:
 permalink: /about/
 ---
 
-Меня зовут Юрий, живу в Самаре!
+![_config.yml]({{ site.baseurl }}/images/config.png)
+
+Меня зовут Юрий, живу в Самаре
 
 ### Больше информации
 
