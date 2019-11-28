@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Тестовая запись
+excerpt_separator: <!--more-->
 ---
 
 Тестовая запись моего блога
