@@ -12,4 +12,4 @@ permalink: /about/
 
 ### Мои контакты
 
-[email@domain.com](mailto:yuriymironov77@gmail.com)
+[yuriymironov77@gmail.com](mailto:yuriymironov77@gmail.com)
