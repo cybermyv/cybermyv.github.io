@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
+title: 
 permalink: /about/
 ---
 
-Some information about you!
+Меня зовут Юрий, живу в Самаре!
 
-### More Information
+### Больше информации
 
-A place to include any other types of information that you'd like to include about yourself.
+Занимаюсь веб-разработкой, аналитикой
 
-### Contact me
+### Мои контакты
 
 [email@domain.com](mailto:email@domain.com)
