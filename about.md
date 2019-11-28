@@ -4,7 +4,7 @@ title:
 permalink: /about/
 ---
 
-![_config.yml]({{ site.baseurl }}/images/mironovyuv.JPG)
+[//]: <> ![_config.yml]({{ site.baseurl }}/images/mironovyuv.JPG)
 
 Меня зовут Юрий, живу в Самаре
 
