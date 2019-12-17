@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Тестовая запись
-excerpt_separator: <!--more-->
+categories: Public
 ---
 
 Тестовая запись моего блога
