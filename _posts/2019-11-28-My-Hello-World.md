@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Тестовая запись
-categories: Public
+category: Public
 ---
 
 Тестовая запись моего блога
