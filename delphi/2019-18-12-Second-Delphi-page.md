@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Втора страница в разделе Delphi
-categories: delphi
+category: delphi
 ---
 
 Вторая страница
