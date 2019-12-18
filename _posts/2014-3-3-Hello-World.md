@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Вместо эпиграфа 
-categories: other
+category: other
 order: 1
 ---
 
