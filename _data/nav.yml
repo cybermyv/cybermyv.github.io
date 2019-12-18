@@ -1,15 +1,15 @@
 # Site navigation links
 - title: Home
-  url: /
+  href: "/"
 
 - title: Angular
-  url: /angular/
+  href: "/angular/"
 
 - title: Delphi
-  url: /delphi/
+  href: "/delphi/"
 
 - title: Analitics
-  url: /analitics/
+  href: "/analitics/"
 
 - title: Other
-  url: /other/
+  href: "/other/"
