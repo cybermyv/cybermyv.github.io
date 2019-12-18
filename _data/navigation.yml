@@ -1,8 +1,5 @@
-- link: /
-  name: Home
-- link: /about/
-  name: About
-- link: /services
-  name: Services
-- link: /contact/
-  name: Contact
+- link: /angular
+  name: Angular
+
+- link: /delphi
+  name: Delphi
