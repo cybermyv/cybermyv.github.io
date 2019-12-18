@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Delphi
-categories: delphi
+category: delphi
 ---
 
 Text for your page goes here.
