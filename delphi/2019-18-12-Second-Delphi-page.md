@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Втора страница в разделе Delphi
 category: delphi
 ---
