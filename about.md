@@ -6,12 +6,9 @@ permalink: /about/
 
 [//]: <> ![_config.yml]({{ site.baseurl }}/images/mironovyuv.JPG)
 
-Меня зовут Юрий, живу в Самаре
+
 
 ### Больше информации
 
-Занимаюсь веб-разработкой, аналитикой
+Занимаюсь веб-разработкой, аналитикой и мобильной разработкой на delphi
 
-### Мои контакты
-
-[yuriymironov77@gmail.com](mailto:yuriymironov77@gmail.com)
