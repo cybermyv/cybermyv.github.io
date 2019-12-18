@@ -1,15 +1,15 @@
-# Site navigation links
-- title: Home
-  href: "/"
+angular:
+ title: "Angular"
+ href: "/angular/"
 
-- title: Angular
-  href: "/angular/"
-
-- title: Delphi
+delphi:
+  title: Delphi
   href: "/delphi/"
 
-- title: Analitics
-  href: "/analitics/"
+analitics:
+ title: Analitics
+ href: "/analitics/"
 
-- title: Other
-  href: "/other/"
+other:
+ title: Other
+ href: "/other/"
