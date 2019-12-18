@@ -13,6 +13,14 @@ navigation_weight: 1
       <div class="entry">
         {{ post.excerpt }}
       </div>
+      
+      <div id='delphi'>
+        {% for a in site.animals %}
+          {% if a.path contains 'dogs' %}
+      <a href='{{ a.url }}'>{{ a.title }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
