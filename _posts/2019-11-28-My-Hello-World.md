@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Тестовая запись
-categories: other
+category: other
 order: 2
 ---
 
