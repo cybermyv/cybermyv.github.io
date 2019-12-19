@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Втора страница в разделе Delphi
+title: внешняя страница в разделе Delphi
 category: delphi
 ---
 
-Вторая страница
+Внешняя страница
 
 ---
 
