@@ -5,7 +5,7 @@ navigation_weight: 1
 ---
 
 <div class="posts">
-  {% assign posts = site.posts | where: "categories", "delphi" %}
+  {% assign posts = site.posts | where: "category", "delphi" %}
   
   {% for post in site.posts %}
     <article class="post">
