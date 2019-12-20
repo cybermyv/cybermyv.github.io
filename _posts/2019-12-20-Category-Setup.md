@@ -23,7 +23,7 @@ Github pages из каробки предоставляет функционал
 
 Мне хотелось сделать все максимально просто.
 
- 1 - В корне сайта создаем каталог _categories в который кладем файл index.html
+## 1 - В корне сайта создаем каталог _categories в который кладем файл index.html
 
 {% highlight html %}
 {% raw %}
@@ -46,7 +46,7 @@ Github pages из каробки предоставляет функционал
 {% endraw %}
 {% endhighlight %}
 
- 1.1 - В каталоге _categories создаем файлы категорий, например delphi.md. Соответствнно на каждую категорию нужен свой файл.
+## 1.1 - В каталоге _categories создаем файлы категорий, например delphi.md. Соответствнно на каждую категорию нужен свой файл.
 
 {% highlight html %}
 {% raw %}
@@ -58,7 +58,7 @@ permalink: "/categories/delphi"
 {% endhighlight %}
 
 
- 2 - В каталоге _layouts создаем файл categories.html 
+## 2 - В каталоге _layouts создаем файл categories.html 
 
 {% highlight html %}
 {% raw %}
@@ -98,7 +98,7 @@ layout: page
 {% endraw %}
 {% endhighlight %}
 
- 3 - Слегка правим корневой index.html, добавляем в него вывод всек категорий 
+## 3 - Слегка правим корневой index.html, добавляем в него вывод всек категорий 
 
 {% highlight html %}
 {% raw %}
@@ -123,8 +123,9 @@ title: Home
 {% endraw %}
 {% endhighlight %}
 
- 4 - Добавляем в _config.yml поддержку категорий и комментим строку permalink
- {% highlight html %}
+## 4 - Добавляем в _config.yml поддержку категорий и комментим строку permalink
+
+{% highlight html %}
 {% raw %}
 # 
 #permalink: /:categories/:title/
@@ -143,3 +144,29 @@ defaults:
 {% endraw %}
 {% endhighlight %}
  
+## 5 - в заголовки постов добавляем категории
+
+{% highlight html %}
+{% raw %}
+---
+layout: post
+title: Категории блога
+categories: 
+- delphi
+---
+{% endraw %}
+{% endhighlight %}
+
+Категорий может быть несколько, размещать с новой строки. 
+Если для статьи не нужно указывать категорию, то ставим пустые квадратные скобки.
+
+{% highlight html %}
+{% raw %}
+---
+layout: post
+title: Категории блога
+categories: []
+---
+{% endraw %}
+{% endhighlight %}
+
