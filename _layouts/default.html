@@ -39,10 +39,11 @@
 --->
           
           <p>
-{%- for category in site.categories -%}
-  <a href="categories/{{ category.title | downcase}}.html">{{ category.title }}</a> |&nbsp
-  {%- endfor -%}
-</p>
+              {%- for category in site.categories -%}
+              <a href="categories/{{ category.title | downcase}}.html">{{ category.title }}</a> |&nbsp
+              {%- endfor -%}
+          </p>
+          
         </header>
       </div>
     </div>
