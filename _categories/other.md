@@ -1,4 +1,4 @@
 ---
-tag: Другое
+tag: other
 permalink: "/categories/other"
 ---
