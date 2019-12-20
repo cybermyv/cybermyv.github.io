@@ -4,17 +4,14 @@ title: Angular routing page
 ---
 
 <div class="posts">
+ {% assign category = page.title|downcas %}
     
-  {% for post in site.posts | where: 'category','angular' %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-      
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+  {% for post in site.posts %}
+    
+   {% if post.categories contains {{category}} %}
+  
+    <li>{{post.title}}</li>
+    
+   {% endif %}
   {% endfor %}
 </div>
