@@ -3,11 +3,11 @@ layout: default
 title: Home
 ---
 
-<nav>
+
 {%- for category in site.categories -%}
   <a href="categories/{{ category.title | downcase}}.html">{{ category.title }}</a> |&nbsp
   {%- endfor -%}
-</nav>
+
 
 <div class="posts">
   {% for post in site.posts %}
