@@ -7,7 +7,7 @@ title: Home
 {%- for category in site.categories -%}
   <a href="categories/{{ category.title | downcase}}.html">{{ category.title }}</a> |&nbsp
   {%- endfor -%}
-<nav>
+</nav>
 
 <div class="posts">
   {% for post in site.posts %}
