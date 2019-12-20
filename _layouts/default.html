@@ -37,12 +37,13 @@
           {% include navigation.html %}
 
 --->
-          
-          <p>
+         <nav>
+           <p>
               {%- for category in site.categories -%}
               <a href="categories/{{ category.title | downcase}}.html">{{ category.title }}</a> |&nbsp
               {%- endfor -%}
-          </p>
+           </p>
+        </nav>
           
         </header>
       </div>
