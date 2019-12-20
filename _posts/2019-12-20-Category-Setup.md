@@ -25,7 +25,7 @@ Github pages из каробки предоставляет функционал
 
 1. В корне сайта создаем каталог _categories в который кладем файл index.html
 
-```
+<code>
 <!DOCTYPE html>
     <body>
       <main class="page-content" aria-label="Content">
@@ -42,4 +42,4 @@ Github pages из каробки предоставляет функционал
     </main>
     </body>
 </html>
-```
+</code>
