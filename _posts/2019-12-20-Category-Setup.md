@@ -59,9 +59,9 @@ permalink: "/categories/delphi"
 
 
 2. В каталоге _layouts создаем файл categories.html 
+
 {% highlight html %}
 {% raw %}
-
 ---
 title: Categories
 layout: page
@@ -71,16 +71,12 @@ layout: page
 <main class="page-content" aria-label="Content">
     <div class="wrapper">
         <div class="home">
-
     {% assign category = page.title|downcase %}
-
     {% for post in site.posts %}
         {% if post.categories contains {{category}}  %}
             <li><a href="{{post.url}}">{{ post.title }}</a></li>
         {% endif %}
     {% endfor %}
-
-
     {%- if site.posts.size > 0 -%}
     <h4 class="post-list-heading">{{ page.list_title }}</h4>
     <ul class="post-list">
@@ -92,7 +88,6 @@ layout: page
                 <a class="post-link" href="{{ post.url | relative_url }}">
                     {{ post.title | escape }}
                     {{ post.category }}
-
                 </a>
             </h5>
         </li>
@@ -100,6 +95,31 @@ layout: page
     </ul>
     {%- endif -%}
 </div>
-
 {% endraw %}
 {% endhighlight %}
+
+3. Слегка правим корневой index.html, добавляем в него вывод всек категорий 
+
+{% highlight html %}
+{% raw %}
+---
+layout: default
+title: Home
+---
+{%- for category in site.categories -%}
+  <a href="categories/{{ category.title | downcase}}.html">{{ category.title }}</a> |&nbsp
+  {%- endfor -%}
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
+{% endraw %}
+{% endhighlight %}
+
