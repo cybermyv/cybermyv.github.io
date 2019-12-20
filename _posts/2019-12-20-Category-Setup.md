@@ -25,7 +25,8 @@ Github pages из каробки предоставляет функционал
 
 1. В корне сайта создаем каталог _categories в который кладем файл index.html
 
-```javascript
+{% highlight html %}
+{% raw %}
 <!DOCTYPE html>
     <body>
       <main class="page-content" aria-label="Content">
@@ -42,14 +43,17 @@ Github pages из каробки предоставляет функционал
     </main>
     </body>
 </html>
-```
+{% endraw %}
+{% endhighlight %}
 
 1.1. В каталоге _categories создаем файлы категорий, например delphi.md. Соответствнно на каждую категорию нужен свой файл.
 
-``
+{% highlight html %}
+{% raw %}
 ---
 tag: delphi
 permalink: "/categories/delphi"
 ---
-``
+{% endraw %}
+{% endhighlight %}
 
