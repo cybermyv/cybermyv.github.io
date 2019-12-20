@@ -24,7 +24,8 @@ Github pages из каробки предоставляет функционал
 Мне хотелось сделать все максимально просто.
 
 1. В корне сайта создаем каталог _categories в который кладем файл index.html
-```javascript
+
+```
 <!DOCTYPE html>
   {%- include head.html -%}
   <body>
