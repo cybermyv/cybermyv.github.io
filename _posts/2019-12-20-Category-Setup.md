@@ -25,7 +25,7 @@ Github pages из каробки предоставляет функционал
 
 1. В корне сайта создаем каталог _categories в который кладем файл index.html
 
-``
+```javascript
 <!DOCTYPE html>
     <body>
       <main class="page-content" aria-label="Content">
@@ -42,7 +42,8 @@ Github pages из каробки предоставляет функционал
     </main>
     </body>
 </html>
-``
+```
+
 1.1. В каталоге _categories создаем файлы категорий, например delphi.md. Соответствнно на каждую категорию нужен свой файл.
 
 ``
