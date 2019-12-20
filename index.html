@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
 
-
 {%- for category in site.categories -%}
   <a href="categories/{{ category.title | downcase}}.html">{{ category.title }}</a> |&nbsp
   {%- endfor -%}
@@ -14,12 +13,9 @@ title: Home
     <article class="post">
       
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-       Категория - {{ post.category }}
-
       <div class="entry">
         {{ post.excerpt }}
       </div>
-     
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       
     </article>
