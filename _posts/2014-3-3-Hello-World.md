@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Вместо эпиграфа 
-category: other
+categories: other
 ---
 
 Ты не будешь не знать чего-то, если напишешь об этом статью в блог!
