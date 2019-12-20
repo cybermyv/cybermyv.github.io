@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Тестовая запись
-categories: delphi
+category: delphi
 ---
 
 Тестовая запись моего блога
