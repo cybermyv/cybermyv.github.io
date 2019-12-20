@@ -4,7 +4,7 @@ title: Angular routing page
 ---
 
 <div class="posts">
-  {% assign posts = site.posts | where: "categories", "angular" %}
+  {% assign posts = site.posts | where: "category", "angular" %}
   
   {% for post in site.posts %}
     <article class="post">
