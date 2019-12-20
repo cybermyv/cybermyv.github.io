@@ -5,7 +5,7 @@ title: Angular routing page
 
 <div class="posts">
     
-  {% for post in site.posts | where: "category", "angular" %}
+  {% for post in site.posts | where: "categories", "angular" %}
     <article class="post">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
