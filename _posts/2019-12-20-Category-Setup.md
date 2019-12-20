@@ -27,10 +27,8 @@ Github pages из каробки предоставляет функционал
 
 ```
 <!DOCTYPE html>
-  {%- include head.html -%}
-  <body>
-    {%- include header.html -%}
-    <main class="page-content" aria-label="Content">
+    <body>
+      <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <h3>Categories</h3>
 
@@ -42,7 +40,6 @@ Github pages из каробки предоставляет функционал
 
       </div>
     </main>
-    {%- include footer.html -%}
-  </body>
+    </body>
 </html>
 ```
