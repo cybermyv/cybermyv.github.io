@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Настройка категории для блога (setup github pages blog categories).
+title: Настройка категории для github pages (setup github pages blog categories).
 categories: 
 - other
 ---
