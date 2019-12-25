@@ -18,30 +18,40 @@ categories:
 Вызываем приложение "Настройки" и переходим в пункт "О телефоне"
 
 <p align="center">
-  <!--- ![useful image]({{ site.url }}/images/20191225_1.jpg){:height="50%" width="50%"} --->
    <img src="{{ site.url }}/images/20191225_1.jpg" style="width: 50%;; height: 50%;">
 </p>
   
 В пункте "О телефоне" проматываем список в низ до раздела "Номер сборки" и нажимаем на него 7 раз.
 Система сообщает, что телефон переведен в режим разработчика.
 
-![useful image]({{ site.url }}/images/20191225_2.jpg){:height="50%" width="50%"}  
+<p align="center">
+   <img src="{{ site.url }}/images/20191225_2.jpg" style="width: 50%;; height: 50%;">
+</p>
 
 В основном меню приложениея "Настройки" переходим в пункт "Система" -> "Дополнительно"
 
-![useful image]({{ site.url }}/images/20191225_3.jpg){:height="50%" width="50%"}  
+<p align="center">
+   <img src="{{ site.url }}/images/20191225_3.jpg" style="width: 50%;; height: 50%;">
+</p>
 
 Разворачиваем пункт "Дополнтительно" и видим, что там появился еще один пункт "{} Для разработчиков"
 
-![useful image]({{ site.url }}/images/20191225_4.jpg){:height="50%" width="50%"}  
+<p align="center">
+   <img src="{{ site.url }}/images/20191225_4.jpg" style="width: 50%;; height: 50%;">
+</p>
 
 Переходим в него и ищем там раздел "Отладка по USB"
 
-![useful image]({{ site.url }}/images/20191225_5.jpg){:height="50%" width="50%"}  
+<p align="center">
+   <img src="{{ site.url }}/images/20191225_5.jpg" style="width: 50%;; height: 50%;">
+</p>
 
 ## На этом настройка телефона закончена.
 
 Теперь переходим в Delphi, в окне Project разворачиваем пункт "Android" -> "Target" и видим, что наше устройство появилось.
 Все, можно писать код и отлаживать приложение.
 
-![useful image]({{ site.url }}/images/20191225_6.png){:height="50%" width="50%"}  
+<p align="center">
+   <img src="{{ site.url }}/images/20191225_6.png" style="width: 50%;; height: 50%;">
+</p>
+
