@@ -18,7 +18,8 @@ categories:
 Вызываем приложение "Настройки" и переходим в пункт "О телефоне"
 
 <p align="center">
-  ![useful image]({{ site.url }}/images/20191225_1.jpg){:height="50%" width="50%"}
+  <!--- ![useful image]({{ site.url }}/images/20191225_1.jpg){:height="50%" width="50%"} --->
+   <img src="{{ site.url }}/images/20191225_1.jpg" style="width: 50%;; height: 50%;">
 </p>
   
 В пункте "О телефоне" проматываем список в низ до раздела "Номер сборки" и нажимаем на него 7 раз.
