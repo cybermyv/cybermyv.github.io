@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Подключение android-устройства к Delphi RAD Studio (Connect Android device to Delphi RAD Studio).
+title: Подключение android-устройства к Delphi 
 categories: 
 - delphi
 ---
@@ -9,6 +9,7 @@ categories:
 Задача довольно простая, но как это сделать, приходится постоянно гуглить.
 
 ---
+## Connect Android device to Delphi RAD Studio
 
 В первую очередь нужно обеспечить нормальное сопряжение телефона с компьютером. Для этого нужен нормальный провод - шаг, 
 о котором и упоминать-то не стоило. Но если провод плохой, то ни о какой отладке речи быть не может.
