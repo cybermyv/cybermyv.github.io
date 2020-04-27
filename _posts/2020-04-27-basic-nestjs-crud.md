@@ -106,5 +106,57 @@ export class UserController {
 {% endraw %}
 {% endhighlight %}
 
+## Установка swagger
 
+Выполним 
 
+>npm i --save @nest/swagger swagger-ui-express
+
+Добавим в main.ts поддержку swagger (const options и const document)
+
+{% highlight js %}
+{% raw %}
+import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { AppModule } from './app.module';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  
+  const options = new DocumentBuilder()
+  .setTitle('Пользователи')
+  .setDescription('API пользователей')
+  .setVersion('0.0.1')
+  .addTag('user')
+  .build()
+
+  const document = SwaggerModule.createDocument(app, options);
+  SwaggerModule.setup('api', app, document);
+  
+  
+  await app.listen(3000);
+}
+bootstrap();
+{% endraw %}
+{% endhighlight %}
+
+В контроллере **controller/user.controller.ts** добавляем ApiTags
+
+{% highlight javascript %}
+{% raw %}
+import { ApiTags } from '@nestjs/swagger';
+
+@ApiTags('user')
+@Controller('user')
+export class UserController {
+
+  constructor(private userService: UserService) { }
+
+  @HttpCode(200)
+  @Get()
+  index(): Promise<User[]> {
+    return this.userService.findAll();
+  }
+}
+{% endraw %}
+{% endhighlight %}
