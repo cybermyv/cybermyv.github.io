@@ -57,7 +57,7 @@ categories:
 привожу только чать контроллера **controller/user.controller.ts**
 
 {% highlight js %}
-{% raw %}
+
 import { Get, HttpCode } from '@nestjs/common';
 import { User } from 'src/user/user.entity';
 import { UserService } from 'src/service/user/user.service';
@@ -73,7 +73,7 @@ export class UserController {
 
     return this.userService.findAll();
   }
-{% endraw %}
+
 {% endhighlight %}
 
 
