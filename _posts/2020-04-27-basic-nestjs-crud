@@ -1,0 +1,12 @@
+---
+layout: post
+title: Простой Crud на nestjs
+categories: 
+- nestjs
+---
+
+Разбираюсь с модной в наших краях темой Nestjs
+Делаем простое CRUD-приложение со swagger
+
+---
+## Общие сведения о nestjs
