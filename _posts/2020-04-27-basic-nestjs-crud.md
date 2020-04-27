@@ -56,7 +56,9 @@ categories:
 Создаем простейший маршрут для проверки работы.
 привожу только чать контроллера **controller/user.controller.ts**
 
-```
+####Javascript　
+
+```javascript
 import { Get, HttpCode } from '@nestjs/common';
 import { User } from 'src/user/user.entity';
 import { UserService } from 'src/service/user/user.service';
