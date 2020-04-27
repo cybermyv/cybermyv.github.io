@@ -45,10 +45,41 @@ categories:
 
 >nest generate controller controller/user
 
-Прописываем необходимые зависимости в user.module.ts 
->providers: [UserService]
+Создаем заготовку для сущности user/user.entity.ts, потом подключим TypeORM.
 
->controllers: [UserController] 
+{% highlight js %}
+{% raw %}
+export interface User {
+    id: number;
+    login: string;
+    password: string;
+    email: string;
+    phone: string;
+    description: string;    
+}
+{% endraw %}
+{% endhighlight %}
+
+
+Прописываем необходимые зависимости в user.module.ts 
+
+{% highlight js %}
+{% raw %}
+import { Module } from '@nestjs/common';
+import { UserService } from 'src/service/user/user.service';
+import { UserController } from 'src/controller/user/user.controller';
+import { User } from './user.entity'
+
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([User])
+  ],
+  providers: [UserService],
+  controllers: [UserController]
+})
+export class UserModule {}
+{% endraw %}
+{% endhighlight %}
 
 ## Маршрут
 ### GET
@@ -57,7 +88,7 @@ categories:
 привожу только чать контроллера **controller/user.controller.ts**
 
 {% highlight js %}
-
+{% raw %}
 import { Get, HttpCode } from '@nestjs/common';
 import { User } from 'src/user/user.entity';
 import { UserService } from 'src/service/user/user.service';
@@ -66,14 +97,13 @@ import { UserService } from 'src/service/user/user.service';
 export class UserController {
 
   constructor(private userService: UserService) { }
-
+  
   @HttpCode(200)
   @Get()
   index(): Promise<User[]> {
-
     return this.userService.findAll();
   }
-
+{% endraw %}
 {% endhighlight %}
 
 
