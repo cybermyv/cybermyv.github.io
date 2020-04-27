@@ -33,6 +33,19 @@ categories:
 
 В ходе работы система спрашивае, какой manager будем использовать, я выбрал npm
 Ставится очень долго. 
-Делаем первый коммит и запускаем в режиме разработки **npm run start:dev**
-Получаем "hello world", каркас приложения установлен
+После окончания установки каркаса приложения делаем первый коммит и запускаем в режиме разработки **npm run start:dev**
+Получаем "hello world", каркас приложения установлен.
+
+## Создаем моудль 
+Для начала создадим модуль **user**, сервис для него и контроллер.
+
+>nest generate module user
+>nest generate service seervice/user
+>nest generate controller controller/user
+
+Прописываем необходимые зависимости в user.module.ts 
+>providers: [UserService]
+>controllers: [UserController] 
+
+
 
