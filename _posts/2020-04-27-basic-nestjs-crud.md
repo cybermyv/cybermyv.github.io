@@ -50,5 +50,30 @@ categories:
 
 >controllers: [UserController] 
 
+## Маршрут
+### GET
+
+Создаем простейший маршрут для проверки работы.
+привожу только чать контроллера **controller/user.controller.ts**
+```javascript
+import { Get, HttpCode } from '@nestjs/common';
+import { User } from 'src/user/user.entity';
+import { UserService } from 'src/service/user/user.service';
+
+@Controller('user')
+export class UserController {
+
+  constructor(private userService: UserService) { }
+
+  @HttpCode(200)
+  @Get()
+  index(): Promise<User[]> {
+
+    return this.userService.findAll();
+  }
+
+
+```
+
 
 
