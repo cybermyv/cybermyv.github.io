@@ -160,3 +160,18 @@ export class UserController {
 }
 {% endraw %}
 {% endhighlight %}
+
+в файле **nest-cli.json** необходимо добавить раздел "plugins"
+
+```
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "plugins": ["@nestjs/swagger/plugin"]
+  }
+}
+
+```
+
+Подготовка сваггера завершена
