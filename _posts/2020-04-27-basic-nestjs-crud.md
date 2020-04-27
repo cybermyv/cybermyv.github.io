@@ -2,7 +2,7 @@
 layout: post
 title: Простой Crud на nestjs
 categories: 
-- angular
+- nestjs
 ---
 
 Разбираюсь с модной в наших краях темой Nestjs
