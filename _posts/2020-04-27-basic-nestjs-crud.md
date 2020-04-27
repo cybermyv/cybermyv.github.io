@@ -40,11 +40,14 @@ categories:
 Для начала создадим модуль **user**, сервис для него и контроллер.
 
 >nest generate module user
+
 >nest generate service seervice/user
+
 >nest generate controller controller/user
 
 Прописываем необходимые зависимости в user.module.ts 
 >providers: [UserService]
+
 >controllers: [UserController] 
 
 
