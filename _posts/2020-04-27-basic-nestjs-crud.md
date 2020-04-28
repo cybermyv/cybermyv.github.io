@@ -46,6 +46,7 @@ categories:
 >nest generate controller controller/user
 
 Создаем заготовку для сущности user/user.entity.ts, потом подключим TypeORM.
+css
 
 ``` css
 export interface User {
