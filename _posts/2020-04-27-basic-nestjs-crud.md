@@ -162,7 +162,8 @@ export class UserController {
 
 в файле **nest-cli.json** необходимо добавить раздел "plugins"
 
-```
+{% highlight javascript %}
+{% raw %}
 {
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
@@ -171,7 +172,8 @@ export class UserController {
   }
 }
 
-```
+{% endraw %}
+{% endhighlight %}
 
 Подготовка сваггера завершена
 
@@ -186,6 +188,9 @@ TypeOrm - объектно-реляционный маппер, который �
 
 В моем случае поставились следующие версии:
 
- @nest/typeorm  - 0.2.24 
+ @nest/typeorm  - 0.2.24
+ 
  typeorm        - 7.0.0  
+ 
  sqlite3        - 4.1.1  
+
