@@ -47,8 +47,7 @@ categories:
 
 Создаем заготовку для сущности user/user.entity.ts, потом подключим TypeORM.
 
-{% highlight js %}
-{% raw %}
+``` css
 export interface User {
     id: number;
     login: string;
@@ -57,9 +56,7 @@ export interface User {
     phone: string;
     description: string;    
 }
-{% endraw %}
-{% endhighlight %}
-
+```
 
 Прописываем необходимые зависимости в user.module.ts 
 
