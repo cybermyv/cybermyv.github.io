@@ -46,9 +46,9 @@ categories:
 >nest generate controller controller/user
 
 Создаем заготовку для сущности user/user.entity.ts, потом подключим TypeORM.
-css
 
-``` css
+{% highlight js %}
+{% raw %}
 export interface User {
     id: number;
     login: string;
@@ -57,7 +57,8 @@ export interface User {
     phone: string;
     description: string;    
 }
-```
+{% endraw %}
+{% endhighlight %}
 
 Прописываем необходимые зависимости в user.module.ts 
 
