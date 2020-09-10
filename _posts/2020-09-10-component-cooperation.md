@@ -218,3 +218,5 @@ export class ChildComponent {
 <button (click)='setUser()'>Set User</button>
 {% endraw %}
 {% endhighlight %}
+
+При нажатии на кнопку в дочернем компоненте - родительский получает через сервис изменение значения переменной user.name и выводит его.
