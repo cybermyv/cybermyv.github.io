@@ -35,7 +35,7 @@ import { Component } from '@angular/core';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css']
 })
-export class AppComponent {
+export class ParentComponent {
   user = {};
 }
 {% endraw %}
@@ -76,5 +76,50 @@ export class ChildComponent {
 Теперь можно в родительском компоненте на кнопку добавить вызов функции дочернего компонента.
 ><button (click)='**appUser**.setUser()'>Set User</button>
 
-При нажатии на кнопку отобразится user.name в родительском компоненте.
+При нажатии на кнопку произойдет вызов метода дочернего компонента **setUser()** и отобразится user.name в родительском компоненте.
 ><p>{{appUser.user.name}}</p>
+
+Это простой способ взаимодействия, но доступа из родительского компонента в дочерний нет, в этом заключается основное ограничение. 
+
+## Доступ к дочернему через @VievChild()
+Немного изменим содержимое родительского компоненита
+
+**parent.component.ts**
+
+{% highlight js %}
+{% raw %}
+import { Component, ViewChild } from '@angular/core';
+import { ChildComponent } from './child/child.component';
+
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+export class ParentComponent {
+  @ViewChild(ChildComponent, {static: false})
+  private childComponent: ChildComponent;
+  
+setUser(){
+    this.childComponent.setUser();
+  }
+}
+{% endraw %}
+{% endhighlight %}
+
+Шаблон тоже слегка изменим
+**parent.component.html**
+
+{% highlight js %}
+{% raw %}
+<button (click)='setUser()'>Set User</button>
+<p>{{childComponent && childComponent.user.name}}</p>
+<app-child></app-child>
+{% endraw %}
+{% endhighlight %}
+
+Дочерний компонент оставляем без изменений.
+
+Такой способ дает прямой доступ через @ViewChild от родительского копомпонента к дочернему, вызывается напрямую метод **this.childComponent.setUser();**
+
+## Взаимодействие через общий сервис.
