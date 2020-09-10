@@ -65,6 +65,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent {
   user = {};
+  
   setUser() {
     this.user = { name: 'UserName' };
   }
@@ -123,3 +124,97 @@ setUser(){
 Такой способ дает прямой доступ через @ViewChild от родительского копомпонента к дочернему, вызывается напрямую метод **this.childComponent.setUser();**
 
 ## Взаимодействие через общий сервис.
+Основная идея - создать общий сервис и отправлять Observable данные из дочернего компонента. Родитель будет подписан на прослушивание, чтобы получать последние изменения данных.
+
+**user.service.ts**
+
+{% highlight js %}
+{% raw %}
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  private userSource = new Subject();
+  userSource$ = this.userSource.asObservable();
+  
+  notifyUser(user) {
+    this.userSource.next(user);
+  }
+}
+{% endraw %}
+{% endhighlight %}
+
+
+Родительский компонент изменим следующим образом
+
+**parent.component.ts**
+{% highlight js %}
+{% raw %}
+import { Component } from '@angular/core';
+import { UserService } from './user.service';
+
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+export class ParentComponent {
+  user = {};
+  
+  constructor(private userService: UserService) {
+    userService.userSource$.subscribe(
+      user => {
+        this.user = user;
+      });
+  }
+}
+{% endraw %}
+{% endhighlight %}
+
+Шаблон тоже изменим, потому что родительский компопнент будет получать данные автоматически.
+**parent.component.html**
+
+{% highlight js %}
+{% raw %}
+<app-child></app-child>
+<p>{{user.name}}</p>
+{% endraw %}
+{% endhighlight %}
+
+Также, необходимо доработать и дочерний компонент.
+
+**child.component.ts**
+
+{% highlight js %}
+{% raw %}
+import { Component } from '@angular/core';
+import { UserService } from '../user.service';
+
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.css']
+})
+export class ChildComponent {
+  constructor(private userService: UserService) { }
+  
+  setUser() {
+    this.userService.notifyUser({ name: 'UserName' });
+  }
+}
+{% endraw %}
+{% endhighlight %}
+
+
+В шаблоне дочернего компонента добавим вызов метода **setUser**
+
+**child.component.html**
+
+{% highlight js %}
+{% raw %}
+<button (click)='setUser()'>Set User</button>
+{% endraw %}
+{% endhighlight %}
